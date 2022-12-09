@@ -4,9 +4,27 @@
     font-weight: 300;
    }
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: "PoppinsRegular";
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
    }
-
 * {
     box-sizing: border-box;
+  }
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* Чтобы прокрутка происходила плавно */
+html {
+    scroll-behavior: smooth;
   }
