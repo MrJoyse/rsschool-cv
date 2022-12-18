@@ -10,47 +10,110 @@
 </head>
 <body>
     <header>
-        <div class="container container-header">
+        <div class="container container_header">
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#profile" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
-                    <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#code" class="nav-link">Code</a></li>
-                    <li class="nav-item"><a href="#courses" class="nav-link">Courses</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-                    <li class="nav-item"><a href="#english" class="nav-link">English</a></li>
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#profile" class="nav_link">Home</a></li>
+                    <li class="nav_item"><a href="#contacts" class="nav_link">Contacts</a></li>
+                    <li class="nav_item"><a href="#summary" class="nav_link">Summary</a></li>
+                    <li class="nav_item"><a href="#skills" class="nav_link">Skills</a></li>
+                    <li class="nav_item"><a href="#code" class="nav_link">Code</a></li>
+                    <li class="nav_item"><a href="#courses" class="nav_link">Courses</a></li>
+                    <li class="nav_item"><a href="#projects" class="nav_link">Projects</a></li>
+                    <li class="nav_item"><a href="#education" class="nav_link">Education</a></li>
+                    <li class="nav_item"><a href="#english" class="nav_link">English</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="main">
-        <div class="container container-main">
-            <section class="section-profile" id="profile">
-                <img src="./assets/img/jpg/my_photo.jpg" alt="profile-photo" class="section-profile-photo">
-                <h1 class="main-title">Konstantsin Khodakov</h1>
+        <div class="container container_main">
+            <section class="section_profile" id="profile">
+                <img src="./assets/img/jpg/my_photo.jpg" alt="profile_photo" class="section_profile_photo">
+                <h1 class="main_title">Konstantsin Khodakov</h1>
             </section>
-            <section class="section-left" id="contacts">
-                <h2 class="section-title">Contacts</h2>
-                <ul class="contacts-list">
-                    <li class="contacts-list-item">Github: <a href="https://github.com/MrJoyse" title="github">MrJoyse</a></li>
-                    <li class="contacts-list-item">Email: <a href="mailto:hodakov.k@gmail.com" title="email">hodakov.k@gmail.com</a></li>
-                    <li class="contacts-list-item">Phone: +375 29 356 51 35</li>
+            <section class="section_left" id="contacts">
+                <h2 class="section_title">Contacts</h2>
+                <ul class="contacts_list">
+                    <li class="contacts_list_item">Github: <a href="https://github.com/MrJoyse" title="github">MrJoyse</a></li>
+                    <li class="contacts_list_item">Email: <a href="mailto:hodakov.k@gmail.com" title="email">hodakov.k@gmail.com</a></li>
+                    <li class="contacts_list_item">Phone: +375 29 356 51 35</li>
                 </ul>
-                <section class="section-left" id="skills">
-                    <h2 class="section-title">Skills</h2>
-                </section>
             </section>
-            <section class="section-right" id="summary">
-                <h2 class="section-title">Summary</h2>
+            <section class="section_right" id="summary">
+                <h2 class="section_title">Summary</h2>
                 <p>
                     Programming is my hobby. I like to create various applications. I want to work in a team on a big project. I love to travel by car and learn something new.
                 </p>
             </section>
+            <section class="section_left" id="skills">
+                <h2 class="section_title">Skills</h2>
+                <ul class="skills_list">
+                    <li>Git</li>
+                    <li>C#, Java, JavaScript</li>
+                    <li>HTML, CSS</li>
+                    <li>SQL</li>
+                    <li>Linux</li>
+                </ul>
+            </section>
+            <section class="section_right" id="code">
+                <h2 class="section_title">Code</h2>
+                <pre class="pre_code">
+                    <code>
+function digPow(n, p){
+    var result = 0;
+    var array = [];
+    var n_array = n;
+    while (n_array > 0) {
+        array.push(n_array - parseInt(n_array/10) * 10);
+        n_array = parseInt(n_array/10);
+    }
+    for(var i = array.length - 1; i >= 0; i--){
+        result = result + array[i] ** p;
+        p++;
+    }
+    if (result % n === 0){
+        return + result / n;
+    }
+    else{
+        return -1;
+    }
+}
+                    </code>
+                </pre>
+            </section>
+            <section class="section_left" id="courses">
+                <h2 class="section_title">Courses</h2>
+                <ul class="courses_list">
+                    <li>RS Schools «JavaScript/Front-end. Stage 0»</li>
+                    <li>CodeBasics HTML</li>
+                    <li>CodeBasics JS</li>
+                    <li>CodeBasics CSS</li>
+                </ul>
+            </section>
+            <section class="section_right" id="projects">
+                <h2 class="section_title">Projects</h2>
+                <a class="a_projects" href="https://github.com/MrJoyse/StoreManager/tree/master/StoreManager"><h3>Automated workplace of a sales manager</h3></a>
+                <a href="https://github.com/MrJoyse/StoreManager/tree/master/StoreManager" title="StoreManager" target="_blank"><img src="./assets/img/jpg/my_projects.jpg" alt="my_projects" class="section_projects_image"></a>
+            </section>
+            <section class="section_left" id="education">
+                <h2 class="section_title">Education</h2>
+                <p class="p_education_title">Gomel State University named after Francysk Skaryna</p>
+            </section>
+            <section class="section_right" id="english">
+                <h2 class="section_title">English</h2>
+                <p class="p_education_title">A0 (Absolute Beginner)</p>
+            </section>
         </div>
     </main>
-    <footer><div class="container"></div></footer>
+    <footer>
+        <div class="container">
+            <div class="footer_elements">
+                <span><a class="a_git" href="https://github.com/MrJoyse" title="MrJoyse" target="_blank"><img src="/assets/img/svg/github.svg" alt="Github_logo">Github</a></span>
+                <span>december 2022</span>
+                <span><a class="a_rsschool" href="https://rs.school/js/" title="https://rs.school/js/" target="_blank"><img class="img_rsschool" src="/assets/img/svg/rs_school_js.svg" alt="rs_school_js_logo"></a></span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
